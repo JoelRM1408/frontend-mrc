@@ -5,5 +5,5 @@ services:
     container_name: front_mrc
     build: .
     ports:
-      - "4200:4200"
+      - "4200:80"
     restart: always
