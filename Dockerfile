@@ -14,7 +14,7 @@ FROM nginx:1.25-alpine
 # Limpia el HTML DEFAULT DE NGINX
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY --from=build /app/dist/frontend-mrc /usr/share/nginx/html
+COPY --from=build /app/dist/frontend-mrc/browser /usr/share/nginx/html
 
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
