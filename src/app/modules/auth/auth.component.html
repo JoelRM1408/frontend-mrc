@@ -1,0 +1,29 @@
+<section class="container-login">
+  <div class="capa-de-sombra">
+    <div class="container" id="container">
+      <div class="logo">
+        <img src="/assets/img/logomrc.png" id="fondoupeu" alt="">
+      </div>
+      <div class="form-container">
+        <h4 class="titulo2"><b>Por favor, identifiquese</b></h4>
+        <form id="form" [formGroup]="formLogin" (ngSubmit)="sendUser()">
+          <mat-form-field id="userpass">
+            <mat-label>Usuario</mat-label>
+            <input type="email" formControlName="user" matInput placeholder="example@mrc.edu.pe">
+          </mat-form-field>
+
+          <mat-form-field id="userpass">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput placeholder="*********" formControlName="password" [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix type="button" (click)="togglePasswordVisibility()">
+              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <button type="submit" id="btiniciar" mat-button color="primary"><b>Iniciar Sesión</b></button>
+          <a href="#">¿Olvidó su contraseña?</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

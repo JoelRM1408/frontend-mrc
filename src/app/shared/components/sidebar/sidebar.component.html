@@ -1,0 +1,49 @@
+<nav class="menu__side">
+  <div class="name__page">
+    <img src="/assets/img/logomrc2.png" width="60px" [routerLink]="['/home/sidebar/welcome']">
+  </div>
+  <mat-list class="options__menu">
+
+    <mat-list-item class="option" [routerLink]="['/home/matricula']">
+      <mat-icon svgIcon="matricula"></mat-icon>
+      <strong>Matricula</strong>
+    </mat-list-item>
+
+    <mat-list-item class="option" [routerLink]="['/home/estudiantes']">
+      <mat-icon svgIcon="informe"></mat-icon>
+      <strong>Estudiantes</strong>
+    </mat-list-item>
+
+    <mat-expansion-panel class="menu-expansion">
+
+      <mat-expansion-panel-header class="maph">
+        <mat-panel-title class="title-flex">
+          <mat-icon svgIcon="proyecto"></mat-icon>
+          <strong class="letra">Mas</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-list class="submenu">
+
+        <mat-list-item class="subitem" [routerLink]="['/home/sidebar/portal-coordinador/proyecto/listapy']">
+          Perfil
+        </mat-list-item>
+
+        <mat-list-item class="subitem" >
+          Validación
+        </mat-list-item>
+
+      </mat-list>
+
+    </mat-expansion-panel>
+
+
+
+    <mat-list-item class="salir" [routerLink]="['/auth']">
+      <mat-icon svgIcon="regresardashboard"></mat-icon>
+      <strong>Salir</strong>
+    </mat-list-item>
+
+  </mat-list>
+
+</nav>

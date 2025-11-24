@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: front_mrc
+    build: .
+    ports:
+      - "4200:4200"
+    restart: always

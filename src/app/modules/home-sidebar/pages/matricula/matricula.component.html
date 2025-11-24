@@ -1,0 +1,128 @@
+<div id="header">
+  <h2 class="header-form">NUEVA MATRICULA</h2>
+</div>
+
+<form id="formmatricula" [formGroup]="matriculaForm">
+  <div class="form1">
+    <div class="fila3">
+      <h6 class="datos">Datos del Estudiante</h6>
+    </div>
+    <div formGroupName="estudiante">
+      <div class="fila1">
+        <mat-form-field class="formulario2">
+          <mat-label>Nombres</mat-label>
+          <input type="text" formControlName="nombres" matInput placeholder="Ingresar Nombres">
+        </mat-form-field>
+        <mat-form-field class="formulario3">
+          <mat-label>Apellido Paterno</mat-label>
+          <input type="text" formControlName="apellido_paterno" matInput placeholder="Ingresar Apellido P.">
+        </mat-form-field>
+      </div>
+      <div class="fila1">
+        <mat-form-field class="formulario6">
+          <mat-label>Apellido Materno</mat-label>
+          <input type="text" formControlName="apellido_materno" matInput placeholder="Ingresar Apellido M.">
+        </mat-form-field>
+        <mat-form-field class="formulario8">
+          <mat-label>DNI</mat-label>
+          <input type="text" formControlName="dni" matInput placeholder="Ingresar DNI">
+        </mat-form-field>
+        <mat-form-field class="formulario8">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input type="date" formControlName="fecha_nacimiento" matInput placeholder="Ingresar Fecha">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="fila3">
+      <h6 class="datos">Datos del Apoderado</h6>
+    </div>
+    <div formGroupName="apoderado">
+      <div class="fila1">
+        <mat-form-field class="formulario4">
+          <mat-label>Nombres</mat-label>
+          <input type="text" formControlName="nombres" matInput placeholder="Ingresar Nombres">
+        </mat-form-field>
+        <mat-form-field class="formulario4">
+          <mat-label>Apellido Paterno</mat-label>
+          <input type="text" formControlName="apellido_paterno" matInput placeholder="Ingresar Apellido P.">
+        </mat-form-field>
+        <mat-form-field class="formulario4">
+          <mat-label>Apellido Materno</mat-label>
+          <input type="text" formControlName="apellido_materno" matInput placeholder="Ingresar Apellido M.">
+        </mat-form-field>
+      </div>
+      <div class="fila1">
+        <mat-form-field class="formulario4">
+          <mat-label>DNI</mat-label>
+          <input type="text" formControlName="dni" matInput placeholder="Ingresar DNI">
+        </mat-form-field>
+        <mat-form-field class="formulario4">
+          <mat-label>Direccion</mat-label>
+          <input type="text" formControlName="direccion" matInput placeholder="Ejm: Mz B Lt 9">
+        </mat-form-field>
+        <mat-form-field class="formulario4">
+          <mat-label>Telefono</mat-label>
+          <input type="text" formControlName="telefono" matInput placeholder="+51">
+        </mat-form-field>
+      </div>
+      <div class="fila1">
+        <mat-form-field class="formulario4">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input type="date" formControlName="fecha_nacimiento" matInput placeholder="Ingresar Fecha">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <div class="form2">
+    <div class="fila3">
+      <h6 class="datos">Datos de Matricula</h6>
+    </div>
+    <div formGroupName="matricula">
+      <div class="fila1">
+        <mat-form-field class="formulario">
+          <mat-label>Fecha Matricula</mat-label>
+          <input type="date" formControlName="fecha_matricula" matInput placeholder="Ingresar nombre">
+        </mat-form-field>
+      </div>
+      <div class="fila1">
+        <mat-form-field class="formulario6">
+          <mat-label>Nivel Academico</mat-label>
+          <mat-select name="nivel_academico" formControlName="nivel_academico" (selectionChange)="onNivelChange($event)">
+            <mat-option value="1">Primaria</mat-option>
+            <mat-option value="2">Secundaria</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formulario6">
+          <mat-label>Grado de Estudio</mat-label>
+          <mat-select name="grado" formControlName="grado_estudio">
+            <mat-option [value]="Grado.nombre" *ngFor="let Grado of gradosFiltrados">{{ Grado.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="fila1">
+        <mat-form-field class="formulario6">
+          <mat-label>Turno</mat-label>
+          <mat-select name="turno" formControlName="turno" (selectionChange)="onTurnoChange($event)">
+            <mat-option value="1">Mañana</mat-option>
+            <mat-option value="2">Tarde</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formulario6">
+          <mat-label>Seccion</mat-label>
+          <mat-select name="seccion" formControlName="seccion">
+            <mat-option [value]="Seccion.nombre" *ngFor="let Seccion of seccionesFiltradas">{{ Seccion.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div id="footer">
+      <button id="btguardar" mat-fab extended color="primary" (click)="registrarMatricula()">
+        Guardar
+      </button>
+    </div>
+  </div>
+</form>

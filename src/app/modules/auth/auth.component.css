@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+
+
+.container-login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/assets/img/fondomrc.jpg");
+    background-blend-mode: screen;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* Para que pongan su logo*/
+.logo {
+    margin-top: 30px;
+    padding-top: 20px;
+    width: 60%;
+    height: 40%;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fondoupeu{
+  width: 60%;
+}
+.capa-de-sombra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    /* Para centrar verticalmente */
+    justify-content: center;
+    /* Para centrar verticalmente */
+    align-items: center;
+    width: 30%;
+    height: 75%;
+}
+
+.form-container a {
+    color: white;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin: 15px 0 15px;
+}
+
+#btiniciar {
+    background: #C8102E;;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.form-container  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+}
+#userpass{
+  width: 100%;
+  height: 28%;
+}
+
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo2{
+  margin-top: 0px;
+  color: #8B1E2D;
+  font-size: 1vw;
+  padding-bottom: 20px;
+}
+.mat-form-field-invalid .mat-form-field-underline,
+.mat-form-field-invalid .mat-form-field-outline-start,
+.mat-form-field-invalid .mat-form-field-outline-end,
+.mat-form-field-invalid .mat-input-element,
+.mat-form-field-invalid .mat-form-field-label {
+  color: inherit !important;
+  border-color: inherit !important;
+  background-color: inherit !important;
+}
