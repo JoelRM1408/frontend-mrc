@@ -6,7 +6,7 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build --configuration frontend-mrc
+RUN npm run build --configuration production
 
 # Etapa 2: Nginx
 FROM nginx:1.25-alpine
