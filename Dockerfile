@@ -11,9 +11,11 @@ RUN npx ng build frontend-mrc --configuration production
 
 # Etapa 2: Nginx
 FROM nginx:1.25-alpine
-COPY --from=build /app/dist/frontend-mrc /usr/share/nginx/html
 # Limpia el HTML DEFAULT DE NGINX
 RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=build /app/dist/frontend-mrc /usr/share/nginx/html
+
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
