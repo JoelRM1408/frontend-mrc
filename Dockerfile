@@ -8,6 +8,8 @@ RUN npm ci
 COPY . .
 RUN npx ng build frontend-mrc --configuration production
 
+RUN rm -rf /usr/share/nginx/html/*
+
 # Etapa 2: Nginx
 FROM nginx:1.25-alpine
 COPY --from=build /app/dist/frontend-mrc /usr/share/nginx/html
